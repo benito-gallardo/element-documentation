@@ -54,6 +54,17 @@ We've included reader-friendly links below for each "classification" of css rule
 
 -   [Atomic](https://github.com/volusion/element-atomic-css/blob/master/dist/atomic.css)
 
+### How to use Atomic?
+
+The Atomic library is loaded anywhere your blocks are used, so there's no extra effort needed to pull it in. As far as using the classes, it's no different than referencing any other class in React. Example:
+
+```jsx
+<div className="flex flex-wrap">
+    <div className="w-100 w-60-l">{/* Your content here */}</div>
+    <div className="w-100 w-40-l">{/* Your content here */}</div>
+</div>
+```
+
 ## Aphrodite
 
 When the Atomic classes just aren't enough to meet your needs, you'll want to write custom styling with Aphrodite. You can view more information on styling your block with Aphrodite [here](../../how-to/style-a-block-with-aphrodite/README.md).
