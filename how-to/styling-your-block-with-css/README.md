@@ -2,10 +2,10 @@
 
 ## Table of contents
 
--   [Atomic CSS Framework](#Atomic-CSS-Framework)
--   [Aphrodite](#Aphrodite)
--   [joinClasses()](<#joinClasses()>)
--   [Inline Styling](#Inline-Styling)
+-   [Atomic CSS Framework](#atomic-css-framework)
+-   [Aphrodite](#aphrodite)
+-   [joinClasses()](#joinclasses)
+-   [Inline Styling](#inline-styling)
 
 ## Atomic CSS Framework
 
