@@ -89,7 +89,7 @@ When the Atomic classes just aren't enough to meet your needs, you'll want to wr
             classes.yourCustomAphroditeClassA,
             classes.yourCustomAphroditeClassB
         ),
-        isRequirementMet && 'w-50' // isRequirementMet === false in this example
+        isRequirementMet && 'w-50-l' // isRequirementMet === false in this example
     )}
 />
 ```
