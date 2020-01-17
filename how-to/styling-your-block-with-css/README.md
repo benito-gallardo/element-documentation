@@ -6,12 +6,29 @@
 -   [Aphrodite](#aphrodite)
 -   [joinClasses()](#joinclasses)
 -   [Inline Styling](#inline-styling)
+-   [Best Practices](#best-practices)
 
 ## Atomic CSS Framework
 
-Atomic is a mobile-first CSS library based on Tachyons for use on Element based Volusion storefronts.
+Atomic is a mobile-first, layout-focused, CSS library based on Tachyons for use on Volusion Volt storefronts.
 
-### Individual Stylesheets
+### Why is the framework so small?
+
+There are a couple reasons for this:
+
+-   Atomic has been extremely trimmed down from the original Tachyons library because Google will penalize you for significant amounts of unused CSS.
+-   In order to build sites to be [Google AMP](https://developers.google.com/amp) compliant, you can use no more than [50 KB of CSS](https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/). This includes inline styling, external stylesheets, and custom Aphrodite CSS. Keeping a nice small file size allows the user to have a lot of breathing room to add blocks to their site without worrying about invalidating it with Google AMP.
+
+### Why not use a CSS purifier?
+
+-   A CSS purifier cannot be used because our blocks are built on React. This means that you can have a large amount of content that does not exist in the DOM until a toggle behavior is triggered (like a modal, or a mobile push menu). If we used a purifier and that content did not exist in the DOM when the page first loads, the CSS for that content could be removed if the same classes are not used elsewhere.
+-   Because you are unable to run JavaScript on Google AMP pages, the above issue is not a concern on AMP so we still run a CSS purifier on Google AMP pages to make sure they get the best possible Google scores.
+
+### Where can I lean more about the Atomic classes?
+
+We've included reader-friendly links below for each "classification" of css rules as well as the entire Atomic library. A quick search for your desired styles will show you what your options are.
+
+#### Individual Stylesheets
 
 -   [box-sizing](https://github.com/volusion/element-atomic-css/blob/master/dist/styles/box-sizing.css)
 -   [coordinates](https://github.com/volusion/element-atomic-css/blob/master/dist/styles/coordinates.css)
@@ -32,6 +49,10 @@ Atomic is a mobile-first CSS library based on Tachyons for use on Element based 
 -   [vertical-align](https://github.com/volusion/element-atomic-css/blob/master/dist/styles/vertical-align.css)
 -   [width](https://github.com/volusion/element-atomic-css/blob/master/dist/styles/width.css)
 -   [z-index](https://github.com/volusion/element-atomic-css/blob/master/dist/styles/z-index.css)
+
+#### All of Atomic
+
+-   [Atomic](https://github.com/volusion/element-atomic-css/blob/master/dist/atomic.css)
 
 ## Aphrodite
 
@@ -68,6 +89,12 @@ Output:
 <div class="flex items-center w-100 dynamic_aphrodite_class"></div>
 ```
 
-## Inline Styling
+## Best Practices
 
-Sometimes inline styling is the best option for what you're trying to accomplish, but we recommend against using it when you can. Since you cannot use certain types of CSS with inline styling (ie. media queries) you end up creating yet another place that CSS needs to be tracked in your code. In the end, inline styling is fully supported, so do what works best.
+#### Avoid Inline Styling
+
+Sometimes inline styling is the best option for what you're trying to accomplish, but we recommend against using it when you can. Since you cannot use certain types of CSS with inline styling (media queries, pseudo selectors, etc) you end up creating yet another place that CSS needs to be tracked in your code. In the end, inline styling is fully supported, so do what works best.
+
+#### Avoid important tags
+
+In order to make a site Google AMP complaint, [you are unable to use `!important` tags in your CSS](https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/style_pages/).
