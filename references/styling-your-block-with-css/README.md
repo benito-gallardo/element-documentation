@@ -10,7 +10,7 @@
 
 ## Atomic CSS Framework
 
-[Atomic](https://github.com/volusion/element-atomic-css) is a mobile-first, layout-focused, CSS library based on Tachyons for use on Volusion Volt storefronts.
+[Atomic](https://github.com/volusion/element-atomic-css) is a [mobile-first](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first), layout-focused, CSS library based on Tachyons for use on Volusion Volt storefronts. The intention is provide only the most frequently used CSS for constructing your content.
 
 ### Why is the framework so small?
 
@@ -56,7 +56,7 @@ We've included reader-friendly links below for each "classification" of css rule
 
 ## Aphrodite
 
-When the Atomic classes just aren't enough to meet your needs, you'll want to write custom styling with Aphrodite. You can view more information on styling your block with Aphrodite [here](../style-a-block-with-aphrodite/README.md).
+When the Atomic classes just aren't enough to meet your needs, you'll want to write custom styling with Aphrodite. You can view more information on styling your block with Aphrodite [here](../../how-to/style-a-block-with-aphrodite/README.md).
 
 ## `joinClasses()`
 
