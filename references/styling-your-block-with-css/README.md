@@ -108,4 +108,4 @@ Sometimes inline styling is the best option for what you're trying to accomplish
 
 #### Avoid important tags
 
-In order to make a site Google AMP complaint, [you are unable to use `!important` tags in your CSS](https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/style_pages/).
+In order to make a site Google AMP complaint, [you are unable to use `!important` qualifiers in your CSS](https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/style_pages/).
