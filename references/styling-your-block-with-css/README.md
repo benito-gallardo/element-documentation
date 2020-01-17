@@ -10,7 +10,7 @@
 
 ## Atomic CSS Framework
 
-Atomic is a mobile-first, layout-focused, CSS library based on Tachyons for use on Volusion Volt storefronts.
+[Atomic](https://github.com/volusion/element-atomic-css) is a mobile-first, layout-focused, CSS library based on Tachyons for use on Volusion Volt storefronts.
 
 ### Why is the framework so small?
 
@@ -21,7 +21,7 @@ There are a couple reasons for this:
 
 ### Why not use a CSS purifier?
 
--   A CSS purifier cannot be used because our blocks are built on React. This means that you can have a large amount of content that does not exist in the DOM until a toggle behavior is triggered (like a modal, or a mobile push menu). If we used a purifier and that content did not exist in the DOM when the page first loads, the CSS for that content could be removed if the same classes are not used elsewhere.
+-   A CSS purifier cannot be used because our blocks are built on React. This means that you can have a large amount of content that does not exist in the DOM until a requirement is met (like a modal, or a mobile push menu). If we used a purifier and that content did not exist in the DOM when the page first loads, the CSS for that content could be removed if the same classes are not also used elsewhere on the page.
 -   Because you are unable to run JavaScript on Google AMP pages, the above issue is not a concern on AMP so we still run a CSS purifier on Google AMP pages to make sure they get the best possible Google scores.
 
 ### Where can I lean more about the Atomic classes?
