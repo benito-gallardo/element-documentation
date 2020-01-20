@@ -77,7 +77,8 @@ When the Atomic classes just aren't enough to meet your needs, you'll want to wr
 
 -   Accept an infinite number of arguments and join them all together with a single space between each one.
 -   Remove any unnecessary whitespace that might be caused before, between, or after your final classes.
--   Remove any invalid classes that might be output by bad logic (removes undefined, null, false, and additional whitespace), which is the biggest reason to use it over string literals.
+-   Supports conditional logic for which classes should be included.
+-   Remove any invalid classes that might be output by bad logic (removes `undefined`, `null`, and `false`), which is the biggest reason to use it over string literals.
 
 #### How to use it:
 
